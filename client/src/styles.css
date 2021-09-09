@@ -1,0 +1,462 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+input:focus {
+    outline: none;
+}
+
+.title {
+    font-size: 1.1rem;
+}
+
+.title:hover {
+    color: rgb(93, 150, 197)
+}
+
+button {
+    font-size: 0.9rem;
+    border: none;
+    height: 2.5rem;
+    font-weight: 700;
+    border-radius: 3px;
+    padding: 0.5rem 0.9rem;
+    margin-left: .5rem;
+    background: #247BA0;
+    color: #fff;
+}
+
+button:hover {
+    background: #2d97c5;
+    cursor: pointer;
+}
+
+.search-button {
+    margin-left: 0;
+    height: 2.8rem;
+    width: 8.5rem;
+    border-radius: 0;
+    font-size: 1.1rem;
+    background-color: #147662;
+}
+
+.search-button:focus {
+    outline: none;
+}
+
+.filter-button {
+    margin-left: 4.1rem;
+}
+
+.search {
+    display: flex;
+    flex-flow: row wrap;
+  
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.block-two {
+    display: flex;
+    flex-direction: row;
+}
+
+.sidebar {
+    width: 45%;
+}
+
+.loading-container {
+    width: 60%;
+    height: 1.5rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1rem;
+    margin-bottom: none;
+    padding-bottom: none;
+}
+
+.article-info-container {
+    width: 100%;
+}
+
+.results-page {
+    width: 55%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.article-info {
+    width: 60%;
+    margin-bottom: 3rem;
+}
+
+.article-info hr {
+    border: none;
+    height: 0.2rem;
+    color: #247BA0;
+    background-color: #247BA0
+
+}
+
+
+.article-info a {
+    color: rgb(63, 121, 168);
+    font-weight: 500;
+    margin-bottom: 2px;
+
+}
+
+
+.article-info a:hover {
+    color: rgb(93, 150, 197);
+
+}
+
+.date-journal {
+    margin-top: 6px;
+    margin-bottom: 4px;
+    display: flex;
+    flex-direction: row;
+}
+
+.date-journal span {
+    margin-right: 8px;
+    color: rgb(14, 117, 14)
+}
+
+
+.journal-info span {
+    margin-right: 7px;
+}
+
+.author, .journal-name {
+    cursor: pointer;
+}
+
+.author:hover, .journal-name:hover {
+    text-decoration: underline;
+    color: steelblue;
+}
+
+.article-ids {
+    margin-bottom: 8px;
+}
+
+.article-ids span {
+    margin-right: 10px;
+}
+
+.collapsed-abstract {
+    height: 63px;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 0;
+
+}
+
+.abstract {
+    margin-bottom: 10px;
+}
+
+.abstract-container {
+    border: 0.2rem solid rgb(163, 161, 161);
+    border-radius: 0.1rem;
+    padding: 1rem 1rem;
+    width: 100%;
+}
+
+
+.ce-button {
+    font-weight: 500;
+    padding: 0.3rem 0.9rem;
+    border: 0.2rem solid rgb(163, 161, 161);
+    cursor: pointer;
+    /* border-radius: 0.4rem; */
+    font-weight: 600;
+}
+
+
+
+.ce-button-tag {
+    padding-bottom: 1rem;
+    border-bottom: none;
+    background-color: #fff;
+}
+
+.expand-abstract {
+    padding-bottom: 1.3rem;
+    padding-top: 0.5rem;
+    background-color: #fff;
+    border: 0.2rem solid rgb(163, 161, 161);
+    border-bottom: none;
+    border-radius: 0.1rem;
+
+}
+
+.expanded-tags {
+    border: 0.2rem solid rgb(163, 161, 161);
+    padding: 1.6rem 1rem;
+    background-color: #fff;
+    margin-top: 0.8rem;
+}
+
+.ce-button:hover {
+    color: steelblue;
+    border: 0.2rem solid steelblue;
+}
+
+.ce-button-tag:hover {
+    padding-bottom: 1rem;
+    border-bottom: none;
+    background-color: #fff;
+}
+
+.ab-hov {
+    border: 0.2rem solid steelblue;
+}
+
+.ab-hov-btn {
+    border: 0.2rem solid steelblue;
+    border-bottom: none;
+}
+
+.expand-abstract:hover {
+    border-bottom: none;
+    border-radius: 0.1rem;
+}
+
+
+
+.expanded-abstract {
+    width: 100%;
+}
+
+.category-container {
+    width: 75%;
+    margin-top: 1.3rem;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-row-gap: 1.3rem;
+}
+
+.abstract-check {
+    margin-left: 2.5rem;
+}
+
+.ce-tag {
+    margin-top: 5px;
+    margin-bottom: 2px;
+    padding: 0.2rem 2rem;
+    color: #fff;
+}
+
+.more-cat, .more-key {
+    cursor: pointer;
+}
+
+.category-ce {
+    background-color: #1aa589;
+    margin-bottom: 0.4rem;
+    border-radius: 0.2rem;
+    padding: 0.4rem;
+}
+
+.keyword-ce {
+    background-color: #2292c2;
+    padding: 0.4rem;
+    margin-top: 0.3rem;
+    border-radius: 0.2rem;
+}
+
+
+.category-tag {
+    padding: 0.43rem;
+    border-radius: 0.4rem;
+    margin: 0.1rem;
+    cursor: pointer;
+    color: #fff;
+    background-color: #189178;
+}
+
+.category-tag:hover, .more-cat:hover{
+    background-color: #1aa589;
+}
+
+.keyword-container {
+    max-width: 95%;
+    margin-top: 1.2rem;
+    display: grid;
+    grid-template-columns: auto auto;
+    row-gap: 1.3rem;
+
+}
+
+.keyword-tag {
+    font-size: 0.97rem;
+    margin: 0.1rem;
+    padding: 0.43rem;
+    color: #fff;
+    background-color: #2292c2;
+    border-radius: 0.4rem;
+}
+
+.keyword-tag:hover, .more-key {
+    background-color: #2aa5da;
+}
+
+.ce-pub {
+    background-color: rgb(40, 145, 172);
+    padding: 0.4rem;
+    margin-top: 0.3rem;
+    border-radius: 0.2rem;
+
+}
+
+.pubtype-tag {
+    color: #fff;
+    padding: 0.43rem;
+    border-radius: 0.4rem;
+    background-color: rgb(40, 145, 172);
+    margin: 0.1rem;
+}
+
+.pubtype-tag:hover {
+    background-color: rgb(49, 172, 202);
+}
+
+.keyword-tag:hover, .pubtype-tag:hover {
+    cursor: pointer;
+}
+
+.type-selection, .category-selection {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2.5rem;
+}
+
+.category-selection {
+    margin-top: 4.9rem;
+}
+
+.searchbar {
+    width: 30rem;
+    height: 2.8rem;
+    font-size: 1.2em;
+    padding-left: 0.5em;
+}
+
+
+label {
+    font-size: 18px;
+    cursor: pointer;
+    font-weight: 500;
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+label span {
+    margin-left: 0.5rem;
+    font-weight: 500;
+}
+
+.header {
+    width: 100%;
+    background-color: rgb(199, 199, 199);
+    background-image: url('./images/covid3.png');
+    height: 160px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 4.2rem;
+    overflow: hidden;
+}
+
+.search-container {
+    width: 70%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.logo {
+    padding: none;
+    margin: none;
+    overflow: hidden;
+    cursor: pointer;
+    width: 13rem;
+}
+
+.number-rows, .page, .range {
+    font-weight: 600;
+    color: rgb(83, 81, 81);
+    font-size: 1.2rem;
+}
+
+
+.filter-label {
+    margin-left: 2.5rem;
+    font-size: 0.9rem;
+    color: rgb(112, 110, 110);
+}
+
+.close-modal {
+    padding: 0.5rem 2rem;
+}
+
+.modal-content {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.change-page {
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    margin-left: 2rem;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.selected-filters {
+    margin-bottom: 1rem;
+}
+
+.filter-one, .filter-two, .clear-filter {
+    background-color: #faead0
+}
+
+
+.clear-filter {
+    cursor: pointer;
+    color: rgb(38, 56, 116);
+    font-style: italic;
+}
+
+.clear-filter:hover {
+    color: rgb(105, 180, 241);
+}
+
+.page-modal {
+  height: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
+
+
+
+
